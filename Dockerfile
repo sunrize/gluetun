@@ -19,6 +19,8 @@ COPY --from=golangci-lint /bin /go/bin/golangci-lint
 COPY --from=mockgen /bin /go/bin/mockgen
 WORKDIR /tmp/gobuild
 COPY go.mod go.sum ./
+ENV GONOSUMDB=github.com/sunrize/*
+RUN go mod download github.com/qdm12/dns
 RUN go mod download
 COPY cmd/ ./cmd/
 COPY internal/ ./internal/

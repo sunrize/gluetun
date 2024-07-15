@@ -54,3 +54,6 @@ require (
 	kernel.org/pub/linux/libs/security/libcap/cap v1.2.69 // indirect
 	kernel.org/pub/linux/libs/security/libcap/psx v1.2.69 // indirect
 )
+
+replace github.com/qdm12/dns => github.com/sunrize/dns mod_unbound_conf
+
